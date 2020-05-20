@@ -2,54 +2,49 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #cecece;
   background: #222;
-  overflow: hidden;
+}
+h1 {
+  color: #cecece;
   text-align: center;
 }
-
-h1 {
-    text-decoration: underline;
+.animated-text {
+  position: absolute;
+  background-color: coral;
+  transform: translate(-50%,-50%);
+  padding: 0px 40px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
 }
-.item-1, 
-.item-2, 
-.item-3 {
-	position: absolute;
-    display: block;
-  
-  width: 50%;
-  
-  font-size: 2em;
-
-	animation-duration: 10s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+.line {
+  font-size: 40px;
+  line-height: 60px;
 }
-
-.item-1{
-	animation-name: anim-1;
+.line:first-child {
+  animation: anim 10s infinite;
 }
 
-.item-2{
-	animation-name: anim-2;
-}
-
-.item-3{
-	animation-name: anim-3;
-}
-
-@keyframes anim-1 {
-	0%, 8.3% { left: -100%; opacity: 0; }
-  8.3%,25% { left: 25%; opacity: 1; }
-  33.33%, 100% { left: 110%; opacity: 0; }
-}
-
-@keyframes anim-2 {
-	0%, 33.33% { left: -100%; opacity: 0; }
-  41.63%, 58.29% { left: 25%; opacity: 1; }
-  66.66%, 100% { left: 110%; opacity: 0; }
-}
-
-@keyframes anim-3 {
-	0%, 66.66% { left: -100%; opacity: 0; }
-  74.96%, 91.62% { left: 25%; opacity: 1; }
-  100% { left: 110%; opacity: 0; }
+@keyframes anim {
+  0%{
+    margin-top: 0;
+  }
+  16%{
+    margin-top: -60px;
+  }
+  33%{
+    margin-top: -120px;
+  }
+  50%{
+    margin-top: -180px;
+  }
+  66%{
+    margin-top: -120px;
+  }
+  83%{
+    margin-top: -60px;
+  }
+  100%{
+    margin-top: 0;
+  }
 }
